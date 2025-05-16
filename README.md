@@ -11,3 +11,9 @@ AMQP, or Advanced Message Queuing Protocol, is a messaging standard designed for
 The initial `guest` refers to the username required for authentication with the RabbitMQ server, while the second `guest` represents the corresponding password. The notation `localhost:5672` specifies the local machine's address (`localhost`) and the designated port (`5672`) for connecting to the RabbitMQ server.
 
 ---
+
+### Slow Subscriber Simulation
+![SlowSimulation](images/SlowSubs.png)
+The chart shows a spike in published messages (yellow) followed by successful delivery and acknowledgment. At this moment, the message queue is empty, with no messages in 'Ready' or 'Unacked' state. This indicates that the subscriber successfully consumed all published messages without backlog.
+
+    
